@@ -31,7 +31,7 @@ public class AuthUser {
     private Integer more;
     private Integer articles;
     private Integer conference;
-
+    private boolean deleted;
 
 
 
