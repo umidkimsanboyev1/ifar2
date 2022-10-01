@@ -1,0 +1,1 @@
+start javaw -jar IFAR2.jar
