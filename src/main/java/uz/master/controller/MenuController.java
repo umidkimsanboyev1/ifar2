@@ -1,10 +1,26 @@
 package uz.master.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import uz.master.domain.News;
+import uz.master.services.ArticleService;
+import uz.master.services.NewsService;
+
+import java.util.List;
 
 @Controller
 public class MenuController {
+
+
+    private final ArticleService articleService;
+    private final NewsService newsService;
+
+    public MenuController(ArticleService articleService, NewsService newsService) {
+        this.articleService = articleService;
+        this.newsService = newsService;
+    }
 
     @GetMapping("/About")
     public String About(){
@@ -38,6 +54,14 @@ public class MenuController {
 
     @GetMapping("/News")
     public String News(){
+        return "redirect:/News/0";
+
+    }
+
+    @GetMapping("/News/{page}")
+    public String News(@PathVariable int page, Model model){
+        List<News> content = newsService.getAllNews(page);
+        model.addAttribute("news", content);
         return "News";
 
     }
@@ -62,6 +86,13 @@ public class MenuController {
 
     @GetMapping("/Seminars")
     public String Seminars(){
+        return "redirect:/Seminars/0";
+
+    }
+
+    @GetMapping("/Seminars/{page}")
+    public String Seminars(@PathVariable int page){
+        List<News> content = newsService.getAllSeminars(page);
         return "Seminars";
 
     }

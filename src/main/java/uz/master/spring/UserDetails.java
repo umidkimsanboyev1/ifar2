@@ -11,10 +11,12 @@ import java.util.Collection;
 public class UserDetails implements org.springframework.security.core.userdetails.UserDetails {
 
     private String username;
+    private Long id;
     private String password;
     private boolean deleted;
 
     public UserDetails(AuthUser user) {
+        this.id= user.getId();
         this.username = user.getUsername();
         this.password = user.getPassword();
         this.deleted = user.isDeleted();

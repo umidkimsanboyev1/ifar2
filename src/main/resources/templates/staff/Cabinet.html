@@ -39,7 +39,6 @@
     <meta property="og:type" content="website">
 </head>
 <body class="u-body u-xl-mode" data-lang="ru">
-
 <header class="u-align-left u-clearfix u-header u-section-row-container" id="sec-664a">
     <div class="u-section-rows">
         <div class="u-grey-70 u-section-row u-section-row-1" id="sec-46aa">
@@ -222,8 +221,7 @@
                                     <li class="u-nav-item"><a class="u-button-style u-nav-link" th:href="@{/Projects}">Projects</a>
                                     </li>
                                     <li class="u-nav-item"><a class="u-button-style u-nav-link"
-                                                              th:href="@{/Regulatory-documents}">Regulatory
-                                        documents</a>
+                                                              th:href="@{/Regulatory-documents}">Regulatory documents</a>
                                     </li>
                                     <li class="u-nav-item"><a class="u-button-style u-nav-link" th:href="@{/Seminars}">Seminars</a>
                                     </li>
@@ -255,6 +253,7 @@
     </div>
 </header>
 <br>
+<br>
 <section class="u-align-center u-clearfix u-image u-section-1" id="carousel_aefa"
          data-image-width="1980" data-image-height="1320">
     <div class="u-clearfix u-sheet u-sheet-1">
@@ -276,21 +275,18 @@
         </div>
         <h4 class="u-align-left u-text u-text-1" th:text="${user.getName()}">Name</h4>
         <h4 class="u-align-left u-custom-font u-font-oswald u-text u-text-2" th:text="${user.getSurName()}">Surname</h4>
-        <p class="u-align-left u-text u-text-3"><span class="u-file-icon u-icon u-icon-1"><img src="/images/2337094.png"
-                                                                                               alt=""></span>&nbsp;<span
-                th:text="${user.getUniversity()}"></span>
+        <p th:text="${user.getUniversity()}" class="u-align-left u-text u-text-3"><span class="u-file-icon u-icon u-icon-1"><img src="/images/2337094.png"
+                                                                                               alt=""></span>&nbsp;
         </p>
-        <p class="u-align-left u-text u-text-4"><span class="u-file-icon u-icon u-icon-2"><img src="/images/3586644.png"
-                                                                                               alt=""></span>&nbsp;<span
-                th:text="${user.getDegree()}"></span>
+        <p th:text="${user.getDegree()}" class="u-align-left u-text u-text-4"><span class="u-file-icon u-icon u-icon-2"><img src="/images/3586644.png"
+                                                                                               alt=""></span>&nbsp;
         </p>
         <div class="u-list u-list-1" style="
-  margin: -283px 162px 0 770px !important;">
+  margin: -283px 162px 0 880px !important;">
             <div class="u-repeater u-repeater-1">
                 <div class="u-align-center u-container-style u-list-item u-repeater-item u-list-item-1">
                     <div class="u-container-layout u-similar-container u-container-layout-1">
-                        <h3 th:text="${user.getArticles()}"
-                            class="u-align-center u-custom-font u-font-montserrat u-text u-text-palette-1-base u-text-5"
+                        <h3 th:text="${user.getArticles()}" class="u-align-center u-custom-font u-font-montserrat u-text u-text-palette-1-base u-text-5"
                             data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">
                             120</h3>
                         <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-6">ARTICLES</h5>
@@ -298,8 +294,7 @@
                 </div>
                 <div class="u-container-style u-list-item u-repeater-item u-list-item-2">
                     <div class="u-container-layout u-similar-container u-container-layout-2">
-                        <h3 th:text="${user.getPosts()}"
-                            class="u-align-center u-custom-font u-font-montserrat u-text u-text-palette-1-base u-text-7"
+                        <h3 th:text="${user.getPosts()}" class="u-align-center u-custom-font u-font-montserrat u-text u-text-palette-1-base u-text-7"
                             data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">
                             140</h3>
                         <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-8">POSTS</h5>
@@ -307,8 +302,7 @@
                 </div>
                 <div class="u-align-center u-container-style u-list-item u-repeater-item u-list-item-3">
                     <div class="u-container-layout u-similar-container u-container-layout-3">
-                        <h3 th:text="${user.getConference()}"
-                            class="u-align-center u-custom-font u-font-montserrat u-text u-text-palette-1-base u-text-9"
+                        <h3 th:text="${user.getConference()}" class="u-align-center u-custom-font u-font-montserrat u-text u-text-palette-1-base u-text-9"
                             data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">
                             56</h3>
                         <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-10"> Conference
@@ -317,8 +311,7 @@
                 </div>
                 <div class="u-align-center u-container-style u-list-item u-repeater-item u-list-item-4">
                     <div class="u-container-layout u-similar-container u-container-layout-4">
-                        <h3 th:text="${user.getMore()}"
-                            class="u-align-center u-custom-font u-font-montserrat u-text u-text-palette-1-base u-text-11"
+                        <h3 th:text="${user.getMore()}" class="u-align-center u-custom-font u-font-montserrat u-text u-text-palette-1-base u-text-11"
                             data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">
                             56</h3>
                         <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-12">MORE</h5>
@@ -358,24 +351,20 @@
                             <p class="u-custom-font u-font-oswald u-text u-text-custom-color-4 u-text-default u-text-13">
                                 Contacts</p>
                             <div class="u-clearfix u-expanded-width u-group-elements u-group-elements-2">
-                                <p
-                                   class="u-align-left u-text u-text-custom-color-4 u-text-14"><span
+                                <p  class="u-align-left u-text u-text-custom-color-4 u-text-14"><span
                                         class="u-file-icon u-icon u-icon-3"><img src="/images/646094.png" alt=""></span>&nbsp;<span th:text="${user.getEmail1()}" ></span>
                                 </p>
-                                <p
-                                   class="u-align-left u-text u-text-custom-color-4 u-text-15"><span
-                                        class="u-file-icon u-icon u-icon-4"><img src="/images/646094.png" alt=""></span>&nbsp;<span th:text="${user.getEmail2()}" ></span>
+                                <p class="u-align-left u-text u-text-custom-color-4 u-text-15"><span
+                                        class="u-file-icon u-icon u-icon-4"><img src="/images/646094.png" alt=""></span><span th:text="${user.getEmail2()}" ></span>
                                 </p>
-                                <p class="u-align-left u-text u-text-16"><span
-                                        class="u-file-icon u-icon u-icon-5"><img
-                                        src="/images/126509.png" alt=""></span>&nbsp;<span th:text="${user.getPhone()}" ></span>
+                                <p th:text="${user.getPhone()}" class="u-align-left u-text u-text-16"><span class="u-file-icon u-icon u-icon-5"><img
+                                        src="/images/126509.png" alt=""></span>&nbsp;+998 99 999 99 99
                                 </p>
-                                <h4 th:text="'Address:&nbsp;' + ${user.getAddress()}" class="u-text u-text-17"> </h4>
+                                <h4 th:text="'Address:&nbsp;' + ${user.getAddress()}" class="u-text u-text-17">Feruza ko'chasi&nbsp;27/35</h4>
                             </div>
                         </div>
                         <p class="u-align-left u-text u-text-custom-color-4 u-text-18">Sho​rt BIO</p>
-                        <p th:text="${user.getBio()}" class="u-align-justify u-text u-text-custom-color-4 u-text-19"> A
-                            wise Instagram bio once
+                        <p th:text="${user.getBio()}" class="u-align-justify u-text u-text-custom-color-4 u-text-19"> A wise Instagram bio once
                             said, “The happiness of your life depends on the quality of your thoughts.” Well, sometimes
                             you can find a little extra happiness when you dress those thoughts up with a cool
                             font.Content on Instagram, Twitter, Twitch, TikTok and everywhere else online is
@@ -494,19 +483,16 @@
 </section>
 <section class="u-clearfix u-section-2" id="sec-b702">
     <div class="u-container-style u-expanded-width u-grey-10 u-group u-group-1">
-        <div class="u-container-layout u-container-layout-1">
-            <img class="u-border-2 u-border-grey-75 u-image u-image-round u-radius-26 u-image-1"
-                 src="/images/797894c5f3f176f0c75d5570a251b6ab2a51f558e9f79792fec19a35acf125593f960aeec30a4e1b00d86fde2101bcee3eb2af615f77ce8061f1ed_1280.jpg"
-                 alt="" data-image-width="1280" data-image-height="771">
+        <div class="u-container-layout">
             <div class="u-form u-grey-5 u-form-1">
-                <form action="https://forms.nicepagesrv.com/Form/Process"
-                      class="u-clearfix u-form-spacing-50 u-form-vertical u-inner-form" source="email" name="form"
+                <form th:action="@{/activity}" th:method="POST" enctype="multipart/form-data"
+                      class="u-clearfix u-form-spacing-50 u-form-vertical u-inner-form u-form-custom-backend " source="custom" name="form"
                       style="padding: 39px;">
                     <div class="u-form-group u-form-name u-label-left">
                         <label for="name-2ee9" class="u-custom-font u-font-montserrat u-label u-label-1">Title of
                             activitiy</label>
                         <input type="text" placeholder="Title" id="name-2ee9" name="title"
-                               class="u-input u-input-rectangle u-white u-input-1" required="">
+                               class="u-input u-input-rectangle u-white u-input-1" required="" autofocus="autofocus">
                     </div>
                     <div class="u-form-group u-form-message u-label-left">
                         <label for="email-2ee9" class="u-custom-font u-font-montserrat u-label u-label-2">Text for
@@ -518,7 +504,7 @@
                         <label for="message-2ee9"
                                class="u-custom-font u-font-montserrat u-label u-label-3">Picture </label>
                         <input placeholder="Enter your message" rows="4" cols="50" id="message-2ee9" name="picture"
-                               class="u-input u-input-rectangle u-white u-input-3" required="required" type="text">
+                               class="u-input u-input-rectangle u-white u-input-3" required="required" type="file">
                     </div>
                     <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent.</div>
                     <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors
@@ -528,27 +514,26 @@
                     <input type="hidden" name="formServices" value="9eb253e9e91ad165af32dd4e5f0af769">
                 </form>
             </div>
+            <img class="u-border-2 u-border-grey-75 u-image u-image-round u-radius-26 u-image-1"
+                 src="/images/797894c5f3f176f0c75d5570a251b6ab2a51f558e9f79792fec19a35acf125593f960aeec30a4e1b00d86fde2101bcee3eb2af615f77ce8061f1ed_1280.jpg"
+                 alt="" data-image-width="1280" data-image-height="771">
             <a href="https://nicepage.com/c/medicine-science-html-templates"
                class="u-border-none u-btn u-btn-round u-button-style u-hover-custom-color-1 u-palette-1-base u-radius-6 u-btn-1">ADD
                 ACTIVITY</a>
         </div>
     </div>
 </section>
-<br>
-<br>
 <section
         class="u-align-center-lg u-align-center-md u-align-center-xl u-align-left-sm u-align-left-xs u-border-2 u-border-grey-75 u-clearfix u-section-3"
         id="carousel_7121">
-    <div class="u-clearfix u-sheet u-sheet-1" style="min-height: 1000px; !important;">
+    <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-form u-grey-15 u-form-1">
-            <form th:action="@{/editProfile}" th:method="POST" enctype="multipart/form-data"
-                  class="u-clearfix u-form-spacing-13 u-form-custom-backend u-form-vertical u-inner-form"
-                  source="custom" name="form-1" style="padding: 12px;">
+            <form th:action="@{/editProfile}" class="u-clearfix u-form-custom-backend u-form-spacing-13 u-form-vertical u-inner-form" source="custom"
+                  name="form-1" style="padding: 12px;" th:method="POST" >
                 <div class="u-form-group u-form-name u-label-left">
                     <label for="name-ddd1"
                            class="u-custom-font u-font-montserrat u-label u-spacing-79 u-text-custom-color-1 u-label-1">University</label>
-                    <input th:value="${user.getUniversity()}" type="text" placeholder="Fundamental and Applied Research"
-                           id="name-ddd1" name="university"
+                    <input type="text" placeholder="Fundamental and Applied Research" id="name-ddd1" name="university"
                            class="u-border-2 u-border-grey-30 u-input u-input-rectangle u-radius-9 u-white u-input-1"
                            required="">
                 </div>
@@ -556,16 +541,21 @@
                     <label for="email-ddd1"
                            class="u-custom-font u-font-montserrat u-label u-spacing-79 u-text-custom-color-1 u-label-2">Scientific
                         degree</label>
-                    <input th:value="${user.getDegree()}" type="text" placeholder="Professor or doctor" id="email-ddd1"
-                           name="degree"
+                    <input type="text" placeholder="Professor or doctor" id="email-ddd1" name="degree"
                            class="u-border-2 u-border-grey-30 u-input u-input-rectangle u-radius-9 u-white u-input-2"
                            required="required">
                 </div>
                 <div class="u-form-group u-label-left u-form-group-3">
                     <label for="text-94a5"
-                           class="u-custom-font u-font-montserrat u-label u-spacing-79 u-text-custom-color-1 u-label-3">Emails</label>
-                    <input th:value="${user.getEmail1()} + '; ' + ${user.getEmail2()}" type="text"
-                           placeholder="eg: Email1; email2" id="text-94a5" name="emails"
+                           class="u-custom-font u-font-montserrat u-label u-spacing-79 u-text-custom-color-1 u-label-3">Email 1</label>
+                    <input type="text" placeholder="eg: Email1; email2" id="text-94a5" name="email1"
+                           class="u-border-2 u-border-grey-30 u-input u-input-rectangle u-radius-9 u-white u-input-3"
+                           required="required">
+                </div>
+                <div class="u-form-group u-label-left u-form-group-3">
+                    <label for="text-94a5"
+                           class="u-custom-font u-font-montserrat u-label u-spacing-79 u-text-custom-color-1 u-label-3">Email 2</label>
+                    <input type="text" placeholder="eg: Email1; email2" id="text-94a6" name="email2"
                            class="u-border-2 u-border-grey-30 u-input u-input-rectangle u-radius-9 u-white u-input-3"
                            required="required">
                 </div>
@@ -573,7 +563,7 @@
                     <label for="phone-0809"
                            class="u-custom-font u-font-montserrat u-label u-spacing-79 u-text-custom-color-1 u-label-4">Phone
                         number</label>
-                    <input th:value="${user.getPhone()}" type="tel"
+                    <input type="tel"
                            pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})"
                            placeholder="+998(93)1234567" id="phone-0809" name="phoneNumber"
                            class="u-border-2 u-border-grey-30 u-input u-input-rectangle u-radius-9 u-white u-input-4"
@@ -582,40 +572,14 @@
                 <div class="u-form-address u-form-group u-label-left u-form-group-5">
                     <label for="address-884c"
                            class="u-custom-font u-font-montserrat u-label u-spacing-79 u-text-custom-color-1 u-label-5">Address</label>
-                    <input th:value="${user.getAddress()}" type="text" placeholder="Your address" id="address-884c"
-                           name="address"
-                           class="u-border-2 u-border-grey-30 u-input u-input-rectangle u-radius-9 u-white u-input-5"
-                           required="">
-                </div>
-                <div class="u-form-address u-form-group u-label-left u-form-group-5">
-                    <label for="address-884c5"
-                           class="u-custom-font u-font-montserrat u-label u-spacing-79 u-text-custom-color-1 u-label-5">Password</label>
-                    <input type="text" placeholder="Your address" id="address-884c5"
-                           name="address"
-                           class="u-border-2 u-border-grey-30 u-input u-input-rectangle u-radius-9 u-white u-input-5"
-                           required="">
-                </div>
-                <div class="u-form-address u-form-group u-label-left u-form-group-5">
-                    <label for="address-884c6"
-                           class="u-custom-font u-font-montserrat u-label u-spacing-79 u-text-custom-color-1 u-label-5">Password verify</label>
-                    <input type="text" placeholder="Your address" id="address-884c6"
-                           name="address"
-                           class="u-border-2 u-border-grey-30 u-input u-input-rectangle u-radius-9 u-white u-input-5"
-                           required="">
-                </div>
-                <div class="u-form-address u-form-group u-label-left u-form-group-5">
-                    <label for="address-4554"
-                           class="u-custom-font u-font-montserrat u-label u-spacing-79 u-text-custom-color-1 u-label-5">Picture (jpg, jpeg, png)</label>
-                    <input type="file" placeholder="Your address" id="address-4554"
-                           name="address"
+                    <input type="text" placeholder="Your address" id="address-884c" name="address"
                            class="u-border-2 u-border-grey-30 u-input u-input-rectangle u-radius-9 u-white u-input-5"
                            required="">
                 </div>
                 <div class="u-form-group u-form-message u-label-left">
                     <label for="message-ddd1"
                            class="u-custom-font u-font-montserrat u-label u-spacing-79 u-text-custom-color-1 u-label-6">BIO</label>
-                    <textarea th:text="${user.getBio()}" placeholder="Short bio about your self" rows="4" cols="50"
-                              id="message-ddd1" name="bio"
+                    <textarea placeholder="Short bio about your self" rows="4" cols="50" id="message-ddd1" name="bio"
                               class="u-border-2 u-border-grey-30 u-input u-input-rectangle u-radius-9 u-white u-input-6"
                               required=""></textarea>
                 </div>
@@ -822,9 +786,31 @@
         margin: 0 auto 0 0;
     }
 
+    @media (max-width: 1199px) {
+        .u-cookies-consent .u-sheet-1 {
+            min-height: 131px;
+        }
+
+        .u-cookies-consent .u-layout-cell-1 {
+            min-height: 125px;
+        }
+
+        .u-cookies-consent .u-text-1 {
+            margin-right: 0;
+        }
+
+        .u-cookies-consent .u-text-2 {
+            margin-right: 0;
+        }
+
+        .u-cookies-consent .u-layout-cell-2 {
+            min-height: 125px;
+        }
+    }
+
     @media (max-width: 991px) {
         .u-cookies-consent .u-sheet-1 {
-            min-height: 187px;
+            min-height: 106px;
         }
 
         .u-cookies-consent .u-layout-cell-1 {
@@ -834,10 +820,6 @@
         .u-cookies-consent .u-container-layout-1 {
             padding-left: 30px;
             padding-right: 30px;
-        }
-
-        .u-cookies-consent .u-text-2 {
-            margin-right: 0;
         }
 
         .u-cookies-consent .u-layout-cell-2 {

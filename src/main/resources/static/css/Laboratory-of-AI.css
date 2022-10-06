@@ -459,12 +459,12 @@
 }
 
 .u-section-3 .u-sheet-1 {
-  min-height: 698px;
+  min-height: 1000px;
 }
 
 .u-section-3 .u-layout-wrap-1 {
   width: 1042px;
-  margin: 60px auto 0;
+  margin: 0px auto 0;
 }
 
 .u-section-3 .u-layout-cell-1 {
@@ -616,7 +616,7 @@
   padding: 0 1px 0 0;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1400px) {
   .u-section-3 .u-sheet-1 {
     min-height: 487px;
   }

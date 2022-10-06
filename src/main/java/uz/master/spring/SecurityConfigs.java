@@ -49,14 +49,14 @@ public class SecurityConfigs extends WebSecurityConfigurerAdapter {
                         .loginProcessingUrl("/login")
                         .usernameParameter("username")
                         .passwordParameter("password")
-                        .defaultSuccessUrl("/panel", true)
+                        .defaultSuccessUrl("/cabinet", true)
                 )
                 .rememberMe(httpSecurityRememberMeConfigurer -> httpSecurityRememberMeConfigurer
                         .key("bsiudbhdsfsdfsfsdhbf")
                         .rememberMeParameter("remember-me")
                         .tokenValiditySeconds((int) TimeUnit.DAYS.toSeconds(40))
                 ).logout(httpSecurityLogoutConfigurer -> httpSecurityLogoutConfigurer
-                        .logoutUrl("/auth/logout")
+                        .logoutUrl("/logout")
                         .logoutRequestMatcher(new AntPathRequestMatcher("/logout","GET"))
                         .invalidateHttpSession(true)
                         .clearAuthentication(true)

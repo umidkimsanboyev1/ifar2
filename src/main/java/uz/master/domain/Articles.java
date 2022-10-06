@@ -29,5 +29,7 @@ public class Articles {
     private String revised;
     private String published;
     private boolean openAccess;
+    private boolean deleted;
+    private boolean active;
 
 }

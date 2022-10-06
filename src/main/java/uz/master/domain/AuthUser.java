@@ -27,6 +27,7 @@ public class AuthUser {
     private String email2;
     private String phone;
     private String address;
+    private String picture;
     private Integer posts;
     private Integer more;
     private Integer articles;
