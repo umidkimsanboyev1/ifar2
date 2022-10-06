@@ -9,7 +9,7 @@ import uz.master.repository.ArticleRepository;
 @Service
 public class ArticleService {
 
-    private final
+    private final ArticleRepository repository;
     private final FileStorageService fileStorageService;
     private final ArticleMapper mapper;
 
@@ -18,6 +18,7 @@ public class ArticleService {
         this.fileStorageService = fileStorageService;
         this.mapper = mapper;
     }
+
 
     public String createArticle(ArticleCreateDTO dto) {
         try {

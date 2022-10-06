@@ -7,7 +7,6 @@ import uz.master.domain.News;
 
 import java.util.List;
 
-@Repository
 public interface NewsRepository extends JpaRepository<News, Long> {
 
     List<News> findNewsByNewsTrueAndDeletedFalseAndActiveTrue(Pageable pageable);
