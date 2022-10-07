@@ -29,10 +29,4 @@ public class Ifar2Application {
                 .password("apalon13")
                 .build();
     }
-
-
-
-
-
-
 }
