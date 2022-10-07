@@ -5,7 +5,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import uz.master.domain.News;
-import uz.master.services.ArticleService;
 import uz.master.services.NewsService;
 
 import java.util.List;
@@ -14,11 +13,9 @@ import java.util.List;
 public class MenuController {
 
 
-    private final ArticleService articleService;
     private final NewsService newsService;
 
-    public MenuController(ArticleService articleService, NewsService newsService) {
-        this.articleService = articleService;
+    public MenuController(NewsService newsService) {
         this.newsService = newsService;
     }
 

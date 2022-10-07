@@ -32,5 +32,4 @@ public class News {
     private Date date;
     private Integer seen;
     private boolean deleted;
-    private boolean active;
 }

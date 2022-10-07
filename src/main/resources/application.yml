@@ -4,7 +4,7 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     username: postgres
-    password: umidmaster98
+    password: apalon13
     url: jdbc:postgresql://localhost:5432/ifar_uz
   servlet:
     multipart:
@@ -12,4 +12,5 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+      format_sql: true
     show_sql: true

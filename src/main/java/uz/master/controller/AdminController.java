@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import uz.master.DTOs.ArticleCreateDTO;
 import uz.master.DTOs.AuthUser;
+import uz.master.DTOs.NewsDTO;
 import uz.master.services.ArticleService;
 import uz.master.services.AuthUserService;
+import uz.master.services.NewsService;
 import uz.master.session.SessionUser;
 
 import java.util.Objects;
@@ -17,14 +19,16 @@ import java.util.Objects;
 @Controller
 public class AdminController {
 
-    private final ArticleService articleService;
     private final AuthUserService authUserService;
+    private final ArticleService articleService;
+    private final NewsService newsService;
     private final SessionUser sessionUser;
 
 
-    public AdminController(ArticleService articleService, AuthUserService authUserService, SessionUser sessionUser) {
-        this.articleService = articleService;
+    public AdminController(AuthUserService authUserService, ArticleService articleService, NewsService newsService, SessionUser sessionUser) {
         this.authUserService = authUserService;
+        this.articleService = articleService;
+        this.newsService = newsService;
         this.sessionUser = sessionUser;
     }
 
@@ -72,11 +76,11 @@ public class AdminController {
 
 
 
-//    @PostMapping("/createNews")
-//    public String createNews(NewsDTO dto){
-//        String result = newsService.createNews(dto);
-//        model.addAttribute("result", result);
-//        return "redirect: /panel";
-//    }
+    @PostMapping("/createNews")
+    public String createNews(NewsDTO dto, Model model){
+        String result = newsService.createNews(dto);
+        model.addAttribute("result", result);
+        return "redirect: /panel";
+    }
 
 }

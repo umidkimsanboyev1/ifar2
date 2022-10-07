@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface NewsRepository extends JpaRepository<News, Long> {
 
-    List<News> findNewsByNewsTrueAndDeletedFalseAndActiveTrue(Pageable pageable);
-    List<News> findNewsBySeminarTrueAndDeletedFalseAndActiveTrue(Pageable pageable);
+    List<News> findNewsByNewsTrueAndDeletedFalse(Pageable pageable);
+    List<News> findNewsBySeminarTrueAndDeletedFalse(Pageable pageable);
 
 }
