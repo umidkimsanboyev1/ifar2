@@ -12,9 +12,10 @@ public class SessionUser {
     private String code;
 
     public UserDetails getInstance() {
-        return  (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        return (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
     }
+
     public Long getId() {
         return getInstance().getId();
     }

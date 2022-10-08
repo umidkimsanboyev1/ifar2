@@ -16,7 +16,7 @@ public class UserDetails implements org.springframework.security.core.userdetail
     private boolean deleted;
 
     public UserDetails(AuthUser user) {
-        this.id= user.getId();
+        this.id = user.getId();
         this.username = user.getUsername();
         this.password = user.getPassword();
         this.deleted = user.isDeleted();

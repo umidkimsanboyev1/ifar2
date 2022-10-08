@@ -20,6 +20,10 @@ target/
 *.iml
 *.ipr
 *.jar
+/target
+/out
+*.target
+*.out
 
 ### NetBeans ###
 /nbproject/private/

@@ -29,4 +29,6 @@ public class NewsService {
     public String createNews(NewsDTO dto) {
         return null;
     }
+
+
 }

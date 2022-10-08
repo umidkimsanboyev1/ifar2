@@ -25,10 +25,10 @@ public class Uploads {
     private String path;
 
     public Uploads(String originalFilename, String generatedName, String contentType, String s, long size) {
-        this.originalName=originalFilename;
-        this.generatedName=generatedName;
-        this.contentType=contentType;
-        this.path=s;
-        this.size=size;
+        this.originalName = originalFilename;
+        this.generatedName = generatedName;
+        this.contentType = contentType;
+        this.path = s;
+        this.size = size;
     }
 }

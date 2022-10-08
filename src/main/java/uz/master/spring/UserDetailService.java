@@ -18,7 +18,9 @@ public class UserDetailService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        AuthUser user = repository.findAuthUserByUsernameAndDeletedFalse(username).orElseThrow(() -> {throw new UsernameNotFoundException("User Not Found");});
+        AuthUser user = repository.findAuthUserByUsernameAndDeletedFalse(username).orElseThrow(() -> {
+            throw new UsernameNotFoundException("User Not Found");
+        });
         return new uz.master.spring.UserDetails(user);
     }
 

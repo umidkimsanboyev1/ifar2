@@ -1,7 +1,5 @@
 package uz.master.spring;
 
-import org.springframework.boot.jdbc.DataSourceBuilder;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
@@ -12,7 +10,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
-import javax.sql.DataSource;
 import java.util.concurrent.TimeUnit;
 
 @Configuration
@@ -22,16 +19,14 @@ import java.util.concurrent.TimeUnit;
 )
 public class SecurityConfigs extends WebSecurityConfigurerAdapter {
 
+    private static final String[] SecURL = {
+            "/login", "/panel", "/cabinet", "/password"
+    };
+    private static final String[] resources = {
+            "/css/**", "/js/**", "/images/**", "/file/**"
+    };
     private final PasswordEncoder passwordEncoder;
     private final UserDetailService service;
-
-    private static final String[] SecURL = {
-            "/login", "/panel" , "/cabinet"
-    };
-
-    private static final String[] resources = {
-            "/css/**", "/js/**" , "/images/**", "/file/**"
-    };
 
     public SecurityConfigs(PasswordEncoder passwordEncoder, UserDetailService service) {
         this.passwordEncoder = passwordEncoder;
@@ -58,7 +53,7 @@ public class SecurityConfigs extends WebSecurityConfigurerAdapter {
                         .tokenValiditySeconds((int) TimeUnit.DAYS.toSeconds(40))
                 ).logout(httpSecurityLogoutConfigurer -> httpSecurityLogoutConfigurer
                         .logoutUrl("/logout")
-                        .logoutRequestMatcher(new AntPathRequestMatcher("/logout","GET"))
+                        .logoutRequestMatcher(new AntPathRequestMatcher("/logout", "GET"))
                         .invalidateHttpSession(true)
                         .clearAuthentication(true)
                         .deleteCookies("JSESSIONID", "remember-me")

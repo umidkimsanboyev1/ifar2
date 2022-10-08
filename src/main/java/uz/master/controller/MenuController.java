@@ -20,43 +20,43 @@ public class MenuController {
     }
 
     @GetMapping("/About")
-    public String About(){
+    public String About() {
         return "About";
 
     }
 
     @GetMapping("/Articles")
-    public String Articles(){
+    public String Articles() {
         return "Articles";
 
     }
 
     @GetMapping("/Commercialization")
-    public String Commercialization(){
+    public String Commercialization() {
         return "Commercialization";
 
     }
 
     @GetMapping("/Contacts")
-    public String Contacts(){
+    public String Contacts() {
         return "Contacts";
 
     }
 
     @GetMapping("/Laboratories")
-    public String Laboratories(){
+    public String Laboratories() {
         return "Laboratories";
 
     }
 
     @GetMapping("/News")
-    public String News(){
+    public String News() {
         return "redirect:/News/0";
 
     }
 
     @GetMapping("/News/{page}")
-    public String News(@PathVariable int page, Model model){
+    public String News(@PathVariable int page, Model model) {
         List<News> content = newsService.getAllNews(page);
         model.addAttribute("news", content);
         return "News";
@@ -64,31 +64,31 @@ public class MenuController {
     }
 
     @GetMapping("/Projects")
-    public String Projects(){
+    public String Projects() {
         return "Projects";
 
     }
 
     @GetMapping("/Regulatory-documents")
-    public String RegulatoryDocuments(){
+    public String RegulatoryDocuments() {
         return "Regulatory-documents";
 
     }
 
     @GetMapping("/Scientific-council")
-    public String ScientificCouncil(){
+    public String ScientificCouncil() {
         return "Scientific-council";
 
     }
 
     @GetMapping("/Seminars")
-    public String Seminars(){
+    public String Seminars() {
         return "redirect:/Seminars/0";
 
     }
 
     @GetMapping("/Seminars/{page}")
-    public String Seminars(@PathVariable int page){
+    public String Seminars(@PathVariable int page) {
         List<News> content = newsService.getAllSeminars(page);
         return "Seminars";
 
