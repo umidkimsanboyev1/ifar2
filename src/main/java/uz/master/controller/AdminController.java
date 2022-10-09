@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import uz.master.DTOs.*;
 import uz.master.DTOs.AuthUser;
-import uz.master.domain.*;
 import uz.master.services.ArticleService;
 import uz.master.services.AuthUserService;
 import uz.master.services.NewsService;
@@ -46,6 +45,11 @@ public class AdminController {
     @GetMapping("/panel")
     public String panel() {
         return "Admin/panel";
+    }
+
+    @GetMapping("/test")
+    public String getTest() {
+        return "/staff/Cabinet";
     }
 
     @PostMapping("/addArticle")
@@ -87,7 +91,7 @@ public class AdminController {
     }
 
     @GetMapping("password")
-    public String getPasswordPage(){
+    public String getPasswordPage() {
         return "/staff/Password";
     }
 
