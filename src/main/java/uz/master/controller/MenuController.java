@@ -4,7 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import uz.master.DTOs.SearchDTO;
+import uz.master.DTOs.ArticleThymeleafDTO;
 import uz.master.domain.News;
+import uz.master.services.ArticleService;
 import uz.master.services.NewsService;
 
 import java.util.List;
@@ -14,9 +17,11 @@ public class MenuController {
 
 
     private final NewsService newsService;
+    private final ArticleService articleService;
 
-    public MenuController(NewsService newsService) {
+    public MenuController(NewsService newsService, ArticleService articleService) {
         this.newsService = newsService;
+        this.articleService = articleService;
     }
 
     @GetMapping("/About")
@@ -27,8 +32,29 @@ public class MenuController {
 
     @GetMapping("/Articles")
     public String Articles() {
+        return "redirect:/Articles/true/0";
+
+    }
+
+    @GetMapping("/Articles/{byDate}")
+    public String Articles(@PathVariable boolean byDate) {
+        return "redirect:/Articles/" + byDate + "/0";
+
+    }
+
+    @GetMapping("/Articles/{byDate}/{page}")
+    public String Articles(@PathVariable int page, Model model, @PathVariable boolean byDate) {
+        List<ArticleThymeleafDTO> content = articleService.getAllArticles(page, byDate);
+        model.addAttribute("articles", content);
         return "Articles";
 
+    }
+
+    @GetMapping("/Articles/search")
+    public String Articles(SearchDTO dto, Model model) {
+        List<ArticleThymeleafDTO> content = articleService.search(dto.getText());
+        model.addAttribute("articles", content);
+        return "Articles";
     }
 
     @GetMapping("/Commercialization")
@@ -51,16 +77,29 @@ public class MenuController {
 
     @GetMapping("/News")
     public String News() {
-        return "redirect:/News/0";
+        return "redirect:/News/true/0";
 
     }
 
-    @GetMapping("/News/{page}")
-    public String News(@PathVariable int page, Model model) {
-        List<News> content = newsService.getAllNews(page);
-        model.addAttribute("news", content);
+    @GetMapping("/News/{byDate}")
+    public String News(@PathVariable boolean byDate) {
+        return "redirect:/News/" + byDate + "/0";
+
+    }
+
+    @GetMapping("/News/{byDate}/{page}")
+    public String News(@PathVariable int page, Model model, @PathVariable boolean byDate) {
+        List<News> content = newsService.getAllNews(page, byDate);
+        model.addAttribute("articles", content);
         return "News";
 
+    }
+
+    @GetMapping("/News/search")
+    public String News(SearchDTO dto, Model model) {
+        List<News> content = newsService.search(dto.getText());
+        model.addAttribute("articles", content);
+        return "News";
     }
 
     @GetMapping("/Projects")

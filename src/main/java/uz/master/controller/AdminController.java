@@ -69,7 +69,7 @@ public class AdminController {
         return "/staff/MyPage";
     }
 
-    @GetMapping("/{name}")
+    @GetMapping("/staff/{name}")
     public String getStaff(@PathVariable String name, Model model) {
         AuthUser user;
         try {

@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Date;
 
 @Entity
 @Getter
@@ -28,6 +29,7 @@ public class Articles {
     private String received;
     private String revised;
     private String published;
+    private Date createdAt;
     private boolean openAccess;
     private boolean deleted;
     private boolean active;

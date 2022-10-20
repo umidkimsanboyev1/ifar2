@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 public class SecurityConfigs extends WebSecurityConfigurerAdapter {
 
     private static final String[] SecURL = {
-            "/login", "/panel", "/cabinet", "/password"
+            "/login", "/panel", "/cabinet", "/password", "/test"
     };
     private static final String[] resources = {
             "/css/**", "/js/**", "/images/**", "/file/**"

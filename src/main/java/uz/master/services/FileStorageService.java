@@ -20,8 +20,8 @@ import java.util.Optional;
 @Slf4j
 @Service("fileService")
 public class FileStorageService {
-    public static final String UNICORN_UPLOADS_B_4_LIB = "/uploads/project/";
-    public static final Path PATH = Paths.get(UNICORN_UPLOADS_B_4_LIB);
+    public static final String UPLOADS_URL = "/DBProjects/IFAR2/src/main/resources/static/images/";
+    public static final Path PATH = Paths.get(UPLOADS_URL);
 
     private final UploadsRepository repository;
 
@@ -46,9 +46,9 @@ public class FileStorageService {
         String originalFilename = file.getOriginalFilename();
         String extension = StringUtils.getFilenameExtension(file.getOriginalFilename());
         String generatedName = "%s.%s".formatted(System.currentTimeMillis(), extension);
-        Path rootPath = Paths.get(UNICORN_UPLOADS_B_4_LIB, generatedName);
+        Path rootPath = Paths.get(UPLOADS_URL, generatedName);
         Files.copy(file.getInputStream(), rootPath, StandardCopyOption.REPLACE_EXISTING);
-        Uploads uploadedFile = new Uploads(originalFilename, generatedName, file.getContentType(), (UNICORN_UPLOADS_B_4_LIB + generatedName), file.getSize());
+        Uploads uploadedFile = new Uploads(originalFilename, generatedName, file.getContentType(), (UPLOADS_URL + generatedName), file.getSize());
         repository.save(uploadedFile);
         return generatedName;
     }
@@ -57,7 +57,7 @@ public class FileStorageService {
     public UploadsDto loadResource(@NonNull String fileName) throws NoSuchFileException {
         Optional<Uploads> uploads = repository.findByGeneratedName(fileName);
         if (uploads.isEmpty()) throw new NoSuchFileException("not found");
-        FileSystemResource resource = new FileSystemResource(UNICORN_UPLOADS_B_4_LIB + fileName);
+        FileSystemResource resource = new FileSystemResource(UPLOADS_URL + fileName);
         return UploadsDto.builder().resource(resource).originalName(uploads.get().getOriginalName()).newName(uploads.get().getGeneratedName()).contentType(uploads.get().getContentType()).size(uploads.get().getSize()).build();
     }
 }

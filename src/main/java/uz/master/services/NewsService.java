@@ -17,7 +17,7 @@ public class NewsService {
         this.repository = repository;
     }
 
-    public List<News> getAllNews(int page) {
+    public List<News> getAllNews(int page, boolean byDate) {
         return repository.findNewsByNewsTrueAndDeletedFalse(PageRequest.of(page, 10));
     }
 
@@ -31,4 +31,7 @@ public class NewsService {
     }
 
 
+    public List<News> search(String text) {
+        return null;
+    }
 }

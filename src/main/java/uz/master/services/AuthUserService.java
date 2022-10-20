@@ -43,10 +43,10 @@ public class AuthUserService {
             throw new UsernameNotFoundException("USER NOT FOUND");
         }
         AuthUser user = authUserRepository.findAuthUserByNameIgnoreCase(strings.get(1));
-        if (Objects.nonNull(user) && user.getSurName().equalsIgnoreCase(strings.get(0))) {
-            return user;
+        if (!(Objects.nonNull(user) && user.getSurName().equalsIgnoreCase(strings.get(0)))) {
+            throw new UsernameNotFoundException("USER NOT FOUND");
         }
-        return new AuthUser();
+        return user;
     }
 
     public String editProfile(AuthUserDTO dto) {
@@ -59,7 +59,7 @@ public class AuthUserService {
         authUser.setUsername(authUser1.getUsername());
         authUser.setEmail1(mails.get(0));
         authUser.setEmail2(mails.get(1));
-        authUser.setPicture("/uploadsFile/" + fileStorageService.store(picture));
+        authUser.setPicture("/DBProjects/IFAR2/src/main/resources/static/images/" + fileStorageService.store(picture));
         authUser.setDeleted(false);
         authUserRepository.save(authUser);
         return "Succes";

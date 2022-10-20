@@ -7,7 +7,7 @@
     <meta content="" name="description">
     <title>MyPage</title>
     <link href="/css/nicepage.css" media="screen" rel="stylesheet">
-    <link href="/css/MyPage.css" media="screen" rel="stylesheet">
+    <link href="/css/Cabinet.css" media="screen" rel="stylesheet">
     <script class="u-script" defer="" src="/js/jquery.js" type="text/javascript"></script>
     <script class="u-script" defer="" src="/js/nicepage.js" type="text/javascript"></script>
     <meta content="Nicepage 4.18.5, nicepage.com" name="generator">
@@ -263,186 +263,188 @@
     </div>
 </header>
 <br>
-<section class="u-align-center u-clearfix u-image u-section-1" data-image-height="1320"
-         data-image-width="1980" id="carousel_aefa">
+<section class="u-align-center u-clearfix u-image u-section-1" id="carousel_aefa" data-image-width="1980"
+         data-image-height="1320">
     <div class="u-clearfix u-sheet u-sheet-1">
-        <div alt="" class="u-image u-image-circle u-preserve-proportions u-image-1" data-image-height="1280"
-             data-image-width="978"  th:style="'background-image:url(' + ${user.getPicture()} + ') !important;'" ></div>
-        <div class="u-preserve-proportions u-shape u-shape-svg u-text-grey-25 u-shape-1">
-            <svg class="u-svg-link" preserveAspectRatio="none" style="" viewBox="0 0 160 160">
-                <use xlink:href="#svg-7d46" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-            <svg class="u-svg-content" id="svg-7d46" viewBox="0 0 160 160" x="0px" y="0px">
-                <path d="M114.3,152.3l38-38C144.4,130.9,130.9,144.4,114.3,152.3z M117.1,9.1l-108,108c0.8,1.6,1.7,3.2,2.7,4.8l110-110
-	C120.3,10.9,118.7,10,117.1,9.1z M97.5,2L2,97.5c0.4,2,1,4,1.5,5.9l99.9-99.9C101.5,2.9,99.5,2.4,97.5,2z M80,160c2,0,4-0.1,5.9-0.2
-	l73.9-73.9c0.1-2,0.2-3.9,0.2-5.9c0-0.6,0-1.2,0-1.9L78.1,160C78.8,160,79.4,160,80,160z M34.9,146.1c1.5,1,3,2,4.6,2.9L149,39.5
-	c-0.9-1.6-1.9-3.1-2.9-4.6L34.9,146.1z M132.7,19.8L19.8,132.7c1.2,1.3,2.3,2.6,3.6,3.9L136.6,23.4C135.3,22.2,134,21,132.7,19.8z
-	 M59.6,157.4l97.8-97.8c-0.5-1.9-1.1-3.8-1.7-5.7L53.9,155.6C55.8,156.3,57.7,156.9,59.6,157.4z M7.6,45.9L45.9,7.6
-	C29.1,15.5,15.5,29.1,7.6,45.9z M80,0c-2.6,0-5.1,0.1-7.6,0.4l-72,72C0.1,74.9,0,77.4,0,80c0,0.1,0,0.2,0,0.2L80.2,0
-	C80.2,0,80.1,0,80,0z"></path>
-            </svg>
-        </div>
-        <h4 class="u-align-left u-text u-text-1" >Name</h4>
-        <h4 class="u-align-left u-custom-font u-font-oswald u-text u-text-2" th:text="${user.getSurName()}">Surname</h4>
-        <p class="u-align-left u-text u-text-3"><span class="u-file-icon u-icon u-icon-1"><img alt=""
-                                                                                               src="/images/2337094.png"></span>&nbsp;<span
-                th:text="${user.getUniversity()}"></span>
-        </p>
-        <p class="u-align-left u-text u-text-4"><span class="u-file-icon u-icon u-icon-2"><img alt=""
-                                                                                               src="/images/3586644.png"></span>&nbsp;<span
-                th:text="${user.getDegree()}"></span>
-        </p>
-        <div class="u-list u-list-1" style="
-  margin: -283px 162px 0 770px !important;">
-            <div class="u-repeater u-repeater-1">
-                <div class="u-align-center u-container-style u-list-item u-repeater-item u-list-item-1">
-                    <div class="u-container-layout u-similar-container u-container-layout-1">
-                        <h3 class="u-align-center u-custom-font u-font-montserrat u-text u-text-palette-1-base u-text-5"
-                            data-animation-duration="3000"
-                            data-animation-event="scroll" data-animation-name="counter" th:text="${user.getArticles()}">
-                            120</h3>
-                        <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-6">ARTICLES</h5>
+        <div class="u-clearfix u-layout-wrap u-white u-layout-wrap-1">
+            <div class="u-gutter-0 u-layout">
+                <div class="u-layout-row">
+                    <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                        <div class="u-border-2 u-border-black u-container-layout u-container-layout-1">
+                            <img class="u-border-1 u-border-grey-75 u-image u-image-round u-radius-50 u-image-1"
+                                 data-image-width="1280" data-image-height="834" th:src="${user.getPicture()}">
+                            <h2 th:text="${user.getName()}" class="u-align-left u-text u-text-1">Name</h2>
+                            <h2 th:text="${user.getSurName()}"
+                                class="u-align-left u-custom-font u-font-oswald u-text u-text-2">Surname</h2>
+                            <p class="u-align-left u-text u-text-3"><span class="u-file-icon u-icon u-icon-1"><img
+                                    src="/images/2337094.png" alt=""></span>&nbsp;<span
+                                    th:text="${user.getUniversity()}"></span>
+                            </p>
+                            <p class="u-align-left u-text u-text-4"><span class="u-file-icon u-icon u-icon-2"><img
+                                    src="/images/3586644.png" alt=""></span>&nbsp;<span
+                                    th:text="${user.getDegree()}"></span>
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="u-container-style u-list-item u-repeater-item u-list-item-2">
-                    <div class="u-container-layout u-similar-container u-container-layout-2">
-                        <h3 class="u-align-center u-custom-font u-font-montserrat u-text u-text-palette-1-base u-text-7"
-                            data-animation-duration="3000"
-                            data-animation-event="scroll" data-animation-name="counter" th:text="${user.getPosts()}">
-                            140</h3>
-                        <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-8">POSTS</h5>
+                    <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-2">
+                        <div class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-container-layout u-container-layout-2">
+                            <div class="u-list u-list-1">
+                                <div class="u-repeater u-repeater-1">
+                                    <div class="u-align-center u-container-style u-list-item u-repeater-item u-list-item-1">
+                                        <div class="u-container-layout u-similar-container u-container-layout-1">
+                                            <h3 class="u-align-center u-custom-font u-font-montserrat u-text u-text-palette-1-base u-text-5"
+                                                data-animation-duration="3000"
+                                                data-animation-event="scroll" data-animation-name="counter"
+                                                th:text="${user.getArticles()}">
+                                                120</h3>
+                                            <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-6">
+                                                ARTICLES</h5>
+                                        </div>
+                                    </div>
+                                    <div class="u-container-style u-list-item u-repeater-item u-list-item-2">
+                                        <div class="u-container-layout u-similar-container u-container-layout-2">
+                                            <h3 class="u-align-center u-custom-font u-font-montserrat u-text u-text-palette-1-base u-text-7"
+                                                data-animation-duration="3000"
+                                                data-animation-event="scroll" data-animation-name="counter"
+                                                th:text="${user.getPosts()}">
+                                                140</h3>
+                                            <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-8">
+                                                POSTS</h5>
+                                        </div>
+                                    </div>
+                                    <div class="u-align-center u-container-style u-list-item u-repeater-item u-list-item-3">
+                                        <div class="u-container-layout u-similar-container u-container-layout-3">
+                                            <h3 class="u-align-center u-custom-font u-font-montserrat u-text u-text-palette-1-base u-text-9"
+                                                data-animation-duration="3000"
+                                                data-animation-event="scroll" data-animation-name="counter"
+                                                th:text="${user.getConference()}">
+                                                56</h3>
+                                            <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-10">
+                                                Conference
+                                                contribution</h5>
+                                        </div>
+                                    </div>
+                                    <div class="u-align-center u-container-style u-list-item u-repeater-item u-list-item-4">
+                                        <div class="u-container-layout u-similar-container u-container-layout-4">
+                                            <h3 class="u-align-center u-custom-font u-font-montserrat u-text u-text-palette-1-base u-text-11"
+                                                data-animation-duration="3000"
+                                                data-animation-event="scroll" data-animation-name="counter"
+                                                th:text="${user.getMore()}">
+                                                56</h3>
+                                            <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-12">
+                                                MORE</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="u-align-center u-container-style u-list-item u-repeater-item u-list-item-3">
-                    <div class="u-container-layout u-similar-container u-container-layout-3">
-                        <h3 class="u-align-center u-custom-font u-font-montserrat u-text u-text-palette-1-base u-text-9"
-                            data-animation-duration="3000"
-                            data-animation-event="scroll" data-animation-name="counter"
-                            th:text="${user.getConference()}">
-                            56</h3>
-                        <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-10"> Conference
-                            contribution</h5>
-                    </div>
-                </div>
-                <div class="u-align-center u-container-style u-list-item u-repeater-item u-list-item-4">
-                    <div class="u-container-layout u-similar-container u-container-layout-4">
-                        <h3 class="u-align-center u-custom-font u-font-montserrat u-text u-text-palette-1-base u-text-11"
-                            data-animation-duration="3000"
-                            data-animation-event="scroll" data-animation-name="counter" th:text="${user.getMore()}">
-                            56</h3>
-                        <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-12">MORE</h5>
+                    <div class="u-container-style u-layout-cell u-size-10 u-layout-cell-3">
+                        <div class="u-border-2 u-border-grey-75 u-container-layout u-container-layout-7">
+                            <a href="#"
+                               class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-1"><span
+                                    class="u-file-icon u-icon u-text-white u-icon-3"><img
+                                    src="/images/748137-403356d5.png" alt=""></span>&nbsp;Add User
+                            </a>
+                            <a th:href="@{/password}"
+                               class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-2"><span
+                                    class="u-file-icon u-icon u-text-white u-icon-4"><img
+                                    src="/images/3257787-8f5fbeea.png" alt=""></span>&nbsp;CHange&nbsp;<br>Password
+                            </a>
+                            <a th:href="@{/panel}"
+                               class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-3"><span
+                                    class="u-file-icon u-icon u-text-white u-icon-5"><img
+                                    src="/images/1548672-aac5aabd.png" alt=""></span>&nbsp;Panel
+                            </a>
+                            <a th:href="@{/logout}"
+                               class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-4"><span
+                                    class="u-file-icon u-icon u-text-white u-icon-6"><img
+                                    src="/images/1828479-ef71c44b.png" alt=""></span>&nbsp;Logout
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div alt="" class="u-image u-image-circle u-image-2" data-image-height="1280" data-image-width="978"></div>
-        <div class="u-expanded-width u-tab-links-align-right u-tabs u-tabs-1">
+        <div class="u-tab-links-align-right u-tabs u-tabs-1">
             <ul class="u-palette-1-light-1 u-spacing-15 u-tab-list u-unstyled u-tab-list-1" role="tablist">
                 <li class="u-tab-item" role="presentation">
-                    <a aria-controls="tab-14b7"
-                       aria-selected="true"
-                       class="active u-active-palette-1-dark-1 u-border-active-custom-color-1 u-button-style u-custom-font u-heading-font u-tab-link u-tab-link-1"
-                       href="#tab-14b7" id="link-tab-14b7" role="tab">Overview</a>
+                    <a class="active u-active-palette-1-dark-1 u-border-active-custom-color-1 u-button-style u-custom-font u-heading-font u-tab-link u-tab-link-1"
+                       id="link-tab-14b7" href="#tab-14b7" role="tab" aria-controls="tab-14b7" aria-selected="true">Overview</a>
                 </li>
                 <li class="u-tab-item" role="presentation">
-                    <a aria-controls="tab-2917"
-                       aria-selected="false"
-                       class="u-active-palette-1-dark-1 u-border-active-custom-color-1 u-button-style u-custom-font u-heading-font u-tab-link u-tab-link-2"
-                       href="#tab-2917" id="link-tab-2917" role="tab">network</a>
+                    <a class="u-active-palette-1-dark-1 u-border-active-custom-color-1 u-button-style u-custom-font u-heading-font u-tab-link u-tab-link-2"
+                       id="link-tab-2917" href="#tab-2917" role="tab" aria-controls="tab-2917" aria-selected="false">network</a>
                 </li>
                 <li class="u-tab-item" role="presentation">
-                    <a aria-controls="tab-0da5"
-                       aria-selected="false"
-                       class="u-active-palette-1-dark-1 u-border-active-custom-color-1 u-button-style u-custom-font u-heading-font u-tab-link u-tab-link-3"
-                       href="#tab-0da5" id="link-tab-0da5" role="tab">Publications</a>
+                    <a class="u-active-palette-1-dark-1 u-border-active-custom-color-1 u-button-style u-custom-font u-heading-font u-tab-link u-tab-link-3"
+                       id="link-tab-0da5" href="#tab-0da5" role="tab" aria-controls="tab-0da5" aria-selected="false">Publications</a>
                 </li>
                 <li class="u-tab-item" role="presentation">
-                    <a aria-controls="tab-3343"
-                       aria-selected="false"
-                       class="u-active-palette-1-dark-1 u-border-active-custom-color-1 u-button-style u-custom-font u-heading-font u-tab-link u-tab-link-4"
-                       href="#tab-3343" id="link-tab-3343" role="tab">Activities</a>
+                    <a class="u-active-palette-1-dark-1 u-border-active-custom-color-1 u-button-style u-custom-font u-heading-font u-tab-link u-tab-link-4"
+                       id="link-tab-3343" href="#tab-3343" role="tab" aria-controls="tab-3343" aria-selected="false">Activities</a>
                 </li>
                 <li class="u-tab-item" role="presentation">
-                    <a aria-controls="tab-6357"
-                       aria-selected="false"
-                       class="u-active-palette-1-dark-1 u-border-active-custom-color-1 u-button-style u-custom-font u-heading-font u-tab-link u-tab-link-5"
-                       href="#tab-6357" id="link-tab-6357" role="tab">Projects</a>
+                    <a class="u-active-palette-1-dark-1 u-border-active-custom-color-1 u-button-style u-custom-font u-heading-font u-tab-link u-tab-link-5"
+                       id="link-tab-6357" href="#tab-6357" role="tab" aria-controls="tab-6357" aria-selected="false">Projects</a>
                 </li>
             </ul>
             <div class="u-tab-content">
-                <div aria-labelledby="link-tab-14b7"
-                     class="u-align-left u-container-style u-palette-1-light-1 u-tab-active u-tab-pane u-tab-pane-1"
-                     id="tab-14b7" role="tabpanel">
-                    <div class="u-container-layout u-container-layout-5">
+                <div class="u-align-left u-container-style u-palette-1-light-1 u-tab-active u-tab-pane u-tab-pane-1"
+                     id="tab-14b7" role="tabpanel" aria-labelledby="link-tab-14b7">
+                    <div class="u-container-layout u-container-layout-8">
                         <div class="u-clearfix u-group-elements u-group-elements-1">
                             <p class="u-custom-font u-font-oswald u-text u-text-custom-color-4 u-text-default u-text-13">
                                 Contacts</p>
-                            <div class="u-clearfix u-expanded-width u-group-elements u-group-elements-2">
-                                <p
-                                        class="u-align-left u-text u-text-custom-color-4 u-text-14"><span
-                                        class="u-file-icon u-icon u-icon-3"><img alt="" src="/images/646094.png"></span>&nbsp;<span
-                                        th:text="${user.getEmail1()}"></span>
+                            <div class="u-clearfix u-group-elements u-group-elements-2">
+                                <p class="u-align-left u-text u-text-custom-color-4 u-text-14"><span
+                                        class="u-file-icon u-icon u-icon-7"><img src="/images/646094.png" alt=""></span>&nbsp;<span th:text="${user.getEmail1()}"></span>
                                 </p>
-                                <p
-                                        class="u-align-left u-text u-text-custom-color-4 u-text-15"><span
-                                        class="u-file-icon u-icon u-icon-4"><img alt="" src="/images/646094.png"></span>&nbsp;<span
-                                        th:text="${user.getEmail2()}"></span>
+                                <p class="u-align-left u-text u-text-custom-color-4 u-text-15"><span
+                                        class="u-file-icon u-icon u-icon-8"><img src="/images/646094.png" alt=""></span>&nbsp;<span th:text="${user.getEmail2()}"></span>
                                 </p>
-                                <p class="u-align-left u-text u-text-16"><span
-                                        class="u-file-icon u-icon u-icon-5"><img
-                                        alt="" src="/images/126509.png"></span>&nbsp;<span
-                                        th:text="${user.getPhone()}"></span>
+                                <p class="u-align-left u-text u-text-16"><span class="u-file-icon u-icon u-icon-9"><img
+                                        src="/images/126509.png" alt=""></span>&nbsp;<span th:text="${user.getPhone()}"></span>
                                 </p>
-                                <h4 class="u-text u-text-17" th:text="'Address:&nbsp;' + ${user.getAddress()}"></h4>
+                                <h4 class="u-text u-text-17" th:text="'Address: ' + ${user.getAddress()}"></h4>
                             </div>
                         </div>
                         <p class="u-align-left u-text u-text-custom-color-4 u-text-18">Sho​rt BIO</p>
-                        <p class="u-align-justify u-text u-text-custom-color-4 u-text-19" th:text="${user.getBio()}"> A
-                            wise Instagram bio once
-                            said, “The happiness of your life depends on the quality of your thoughts.” Well, sometimes
-                            you can find a little extra happiness when you dress those thoughts up with a cool
-                            font.Content on Instagram, Twitter, Twitch, TikTok and everywhere else online is
-                            prolific—it’s hard to stand out, even in a small group. That’s because the universal font
-                            each platform uses makes all content blend together.With a font generator, doom scrollers
-                            will stop in their tracks simply because what you’ve written looks different and
-                            interesting—bonus points if it’s also worth reading.</p>
+                        <p class="u-align-justify u-text u-text-custom-color-4 u-text-19" th:text="${user.getBio()}"> </p>
                     </div>
                 </div>
-                <div aria-labelledby="link-tab-2917"
-                     class="u-align-left u-container-style u-palette-1-light-1 u-tab-pane u-tab-pane-2"
-                     id="tab-2917" role="tabpanel">
-                    <div class="u-container-layout u-container-layout-6"></div>
+                <div class="u-align-left u-container-style u-palette-1-light-1 u-tab-pane u-tab-pane-2" id="tab-2917"
+                     role="tabpanel" aria-labelledby="link-tab-2917">
+                    <div class="u-container-layout u-container-layout-9"></div>
                 </div>
-                <div aria-labelledby="link-tab-0da5"
-                     class="u-align-left u-container-style u-palette-1-light-1 u-tab-pane u-tab-pane-3"
-                     id="tab-0da5" role="tabpanel">
-                    <div class="u-container-layout u-container-layout-7"><!--blog--><!--blog_options_json-->
+                <div class="u-align-left u-container-style u-palette-1-light-1 u-tab-pane u-tab-pane-3" id="tab-0da5"
+                     role="tabpanel" aria-labelledby="link-tab-0da5">
+                    <div class="u-container-layout u-container-layout-10"><!--blog--><!--blog_options_json-->
                         <!--{"type":"Recent","source":"","tags":"","count":"3"}--><!--/blog_options_json-->
                         <div class="u-blog u-expanded-width u-pagination-center u-blog-1" data-max-items="3">
                             <div class="u-repeater u-repeater-2"><!--blog_post-->
                                 <div class="u-blog-post u-palette-1-light-1 u-repeater-item u-shape-rectangle u-video-cover u-repeater-item-5">
-                                    <div class="u-container-layout u-similar-container u-container-layout-8">
-                                        <img alt=""
-                                             class="u-image u-image-contain u-image-default u-image-3"
-                                             data-image-height="384" data-image-width="1278"
-                                             src="/images/image38.png">
-                                        <a class="u-active-none u-align-right u-border-2 u-border-active-palette-2-dark-1 u-border-hover-palette-2-base u-border-palette-1-base u-btn u-button-style u-hover-none u-none u-text-hover-palette-2-base u-text-palette-1-base u-btn-1"
-                                           href="https://doi.org/10.3390/particles5010001">
+                                    <div class="u-container-layout u-similar-container u-container-layout-11">
+                                        <img class="u-image u-image-contain u-image-default u-image-2"
+                                             src="/images/image38.png" alt="" data-image-width="1278"
+                                             data-image-height="384">
+                                        <a href="https://doi.org/10.3390/particles5010001"
+                                           class="u-active-none u-align-right u-border-2 u-border-active-palette-2-dark-1 u-border-hover-palette-2-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-btn u-button-style u-hover-none u-none u-text-hover-palette-2-base u-text-palette-1-base u-btn-5">
                                             https://doi.org/10.3390/particles5010001</a>
                                         <h3 class="u-align-left u-text u-text-20"> Generic Three-Parameter Wormhole
                                             Solution in Einstein-Scalar
                                             Field Theory</h3>
-                                        <a class="u-border-1 u-border-active-palette-2-base u-border-grey-10 u-border-hover-palette-1-base u-btn u-button-style u-none u-text-palette-1-base u-btn-2"
-                                           href="https://nicepage.best">
+                                        <a href="https://nicepage.best"
+                                           class="u-border-1 u-border-active-palette-2-base u-border-grey-10 u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-none u-text-palette-1-base u-btn-6">
                                             Zden ˇek Stuchlík</a>
-                                        <a class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-palette-1-base u-btn-3"
-                                           href="Staff.html">
+                                        <a href="Staff.html"
+                                           class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-none u-text-palette-1-base u-btn-7">
                                             Bobomurat Ahmedov</a>
-                                        <a class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-palette-1-base u-btn-4"
-                                           href="https://nicepage.best">
+                                        <a href="https://nicepage.best"
+                                           class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-none u-text-palette-1-base u-btn-8">
                                             Ahmadjon Abdujabbarov</a>
-                                        <a class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-palette-1-base u-btn-5"
-                                           href="https://nicepage.best">
+                                        <a href="https://nicepage.best"
+                                           class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-none u-text-palette-1-base u-btn-9">
                                             Bobur Turimov</a>
                                         <p class="u-align-left u-text u-text-21"> 1 Ulugh Beg Astronomical Institute,
                                             Astronomy St. 33, Tashkent 100052, Uzbekistan; bturimov@astrin.uz (B.T.);
@@ -459,18 +461,16 @@
                                             Bezruˇcovo nám. 13, CZ-74601 Opava, Czech Republic;
                                             zdenek.stuchlik@fpf.slu.cz&nbsp;<br>* Correspondence: ahmedov@astrin.uz
                                         </p>
-                                        <a class="u-active-palette-2-base u-btn u-btn-round u-button-style u-custom-color-1 u-hover-custom-color-4 u-radius-1 u-btn-6"
-                                           href="https://www.mdpi.com/2073-8994/14/9/1765/pdf?version=1661409635"><span
-                                                class="u-icon"><svg class="u-svg-content"
-                                                                    style="width: 1em; height: 1em;"
-                                                                    viewBox="0 0 512 512"
-                                                                    x="0px" y="0px"><path
+                                        <a href="https://www.mdpi.com/2073-8994/14/9/1765/pdf?version=1661409635"
+                                           class="u-active-palette-2-base u-btn u-btn-round u-button-style u-custom-color-1 u-hover-custom-color-4 u-radius-1 u-btn-10"><span
+                                                class="u-icon"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px"
+                                                                    y="0px" style="width: 1em; height: 1em;"><path
                                                 d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"></path><path
                                                 d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"></path></svg><img></span>&nbsp;download
                                             pdf
                                         </a>
                                         <p class="u-align-left u-small-text u-text u-text-variant u-text-22">
-                                            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-7"
+                                            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-11"
                                                href="https://www.mdpi.com/2571-712X/5/1/1/pdf?version=1640238093">
                                                 Received: 17 November 2021&nbsp;/&nbsp;Revised: 17 December 2021&nbsp;/&nbsp;Accepted:
                                                 20 December 2021&nbsp;/&nbsp;Published: 22 December 2021</a>
@@ -482,10 +482,9 @@
                         </div><!--/blog-->
                     </div>
                 </div>
-                <div aria-labelledby="link-tab-3343"
-                     class="u-align-left u-container-style u-palette-1-light-1 u-tab-pane u-tab-pane-4"
-                     id="tab-3343" role="tabpanel">
-                    <div class="u-container-layout u-container-layout-9">
+                <div class="u-align-left u-container-style u-palette-1-light-1 u-tab-pane u-tab-pane-4" id="tab-3343"
+                     role="tabpanel" aria-labelledby="link-tab-3343">
+                    <div class="u-container-layout u-container-layout-12">
                         <div class="fr-view u-clearfix u-rich-text u-text u-text-23">
                             <h2>
                                 <span class="u-custom-font u-font-merriweather">Sample Headline</span>
@@ -503,77 +502,28 @@
                                 <br>
                             </p>
                         </div>
-                        <img alt=""
-                             class="u-image u-image-default u-image-4"
-                             data-image-height="852" data-image-width="1280"
-                             src="/images/84e1cbc4acdc96832dc5a465738e6b9f389b33c7f64747973f3b875b7c0a11e88f45956f886dfcdfbbcd7d572bf3cb7b6ea10c8bbe6d06c43a6552_1280.jpg">
+                        <img class="u-image u-image-default u-image-3"
+                             src="/images/84e1cbc4acdc96832dc5a465738e6b9f389b33c7f64747973f3b875b7c0a11e88f45956f886dfcdfbbcd7d572bf3cb7b6ea10c8bbe6d06c43a6552_1280.jpg"
+                             alt="" data-image-width="1280" data-image-height="852">
                         <p class="u-text u-text-24"><span class="u-file-icon u-icon u-text-white"><img
-                                alt="" src="/images/747310-9e55bfcc.png"></span> 16/05/2022&nbsp; ​&nbsp;<span
-                                class="u-file-icon u-icon u-text-white"><img alt="" src="/images/4020228-24f62b54.png"></span>&nbsp;UK
+                                src="/images/747310-9e55bfcc.png" alt=""></span> 16/05/2022&nbsp; ​&nbsp;<span
+                                class="u-file-icon u-icon u-text-white"><img src="/images/4020228-24f62b54.png" alt=""></span>&nbsp;UK
                             Gely Kong
                         </p>
                     </div>
                 </div>
-                <div aria-labelledby="link-tab-6357"
-                     class="u-align-left u-container-style u-palette-1-light-1 u-tab-pane u-tab-pane-5"
-                     id="tab-6357" role="tabpanel">
-                    <div class="u-container-layout u-container-layout-10"></div>
+                <div class="u-align-left u-container-style u-palette-1-light-1 u-tab-pane u-tab-pane-5" id="tab-6357"
+                     role="tabpanel" aria-labelledby="link-tab-6357">
+                    <div class="u-container-layout u-container-layout-13"></div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="u-clearfix u-section-2" id="sec-b702">
-    <div class="u-container-style u-expanded-width u-grey-10 u-group u-group-1">
-        <div class="u-container-layout u-container-layout-1">
-            <img alt=""
-                 class="u-border-2 u-border-grey-75 u-image u-image-round u-radius-26 u-image-1"
-                 data-image-height="771" data-image-width="1280"
-                 src="/images/797894c5f3f176f0c75d5570a251b6ab2a51f558e9f79792fec19a35acf125593f960aeec30a4e1b00d86fde2101bcee3eb2af615f77ce8061f1ed_1280.jpg">
-            <div class="u-form u-grey-5 u-form-1">
-                <form action="https://forms.nicepagesrv.com/Form/Process"
-                      class="u-clearfix u-form-spacing-50 u-form-vertical u-inner-form" name="form" source="email"
-                      style="padding: 39px;">
-                    <div class="u-form-group u-form-name u-label-left">
-                        <label class="u-custom-font u-font-montserrat u-label u-label-1" for="name-2ee9">Title of
-                            activitiy</label>
-                        <input class="u-input u-input-rectangle u-white u-input-1" id="name-2ee9" name="title"
-                               placeholder="Title"
-                               required="" type="text">
-                    </div>
-                    <div class="u-form-group u-form-message u-label-left">
-                        <label class="u-custom-font u-font-montserrat u-label u-label-2" for="email-2ee9">Text for
-                            activity</label>
-                        <textarea class="u-input u-input-rectangle u-white u-input-2" id="email-2ee9" name="body"
-                                  placeholder="Text" required="required"></textarea>
-                    </div>
-                    <div class="u-form-group u-label-left">
-                        <label class="u-custom-font u-font-montserrat u-label u-label-3"
-                               for="message-2ee9">Picture </label>
-                        <input class="u-input u-input-rectangle u-white u-input-3" cols="50" id="message-2ee9"
-                               name="picture" placeholder="Enter your message"
-                               required="required" rows="4" type="text">
-                    </div>
-                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent.</div>
-                    <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors
-                        then try again.
-                    </div>
-                    <input name="recaptchaResponse" type="hidden" value="">
-                    <input name="formServices" type="hidden" value="9eb253e9e91ad165af32dd4e5f0af769">
-                </form>
-            </div>
-            <a class="u-border-none u-btn u-btn-round u-button-style u-hover-custom-color-1 u-palette-1-base u-radius-6 u-btn-1"
-               href="https://nicepage.com/c/medicine-science-html-templates">ADD
-                ACTIVITY</a>
-        </div>
-    </div>
-</section>
-<br>
-<br>
 <section
         class="u-align-center-lg u-align-center-md u-align-center-xl u-align-left-sm u-align-left-xs u-border-2 u-border-grey-75 u-clearfix u-section-3"
         id="carousel_7121">
-    <div class="u-clearfix u-sheet u-sheet-1" style="min-height: 1300px; !important;">
+    <div class="u-clearfix u-sheet u-sheet-1" style="min-height: 950px; !important;">
         <div class="u-form u-grey-15 u-form-1">
             <form class="u-clearfix u-form-spacing-13 u-form-custom-backend u-form-vertical u-inner-form"
                   enctype="multipart/form-data" name="form-1"
