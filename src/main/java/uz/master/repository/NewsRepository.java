@@ -8,8 +8,13 @@ import java.util.List;
 
 public interface NewsRepository extends JpaRepository<News, Long> {
 
-    List<News> findNewsByNewsTrueAndDeletedFalse(Pageable pageable);
+    List<News> findNewsByNewsTrueAndDeletedFalseOrderByCreatedDateDesc(Pageable pageable);
+    List<News> findNewsByNewsTrueAndDeletedFalseOrderByCreatedDateAsc(Pageable pageable);
 
-    List<News> findNewsBySeminarTrueAndDeletedFalse(Pageable pageable);
+    List<News> findNewsByNewsTrueAndDeletedFalseAndTitleContainingIgnoreCaseAndBodyContainingIgnoreCase(String title, String body);
+    List<News> findNewsBySeminarTrueAndDeletedFalseAndTitleContainingIgnoreCaseAndBodyContainingIgnoreCase(String title, String body);
+
+    List<News> findNewsBySeminarTrueAndDeletedFalseOrderByCreatedDateDesc(Pageable pageable);
+    List<News> findNewsBySeminarTrueAndDeletedFalseOrderByCreatedDateAsc(Pageable pageable);
 
 }

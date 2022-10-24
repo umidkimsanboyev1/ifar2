@@ -127,4 +127,16 @@ public class AdminController {
         return "Success";
     }
 
+    @PostMapping("/addNews")
+    public String addNews(NewsDTO dto, Model model){
+        try{
+            String news = newsService.createNews(dto);
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+            model.addAttribute("error", e.getMessage());
+            return "Error";
+        }
+        return "Success";
+    }
+
 }

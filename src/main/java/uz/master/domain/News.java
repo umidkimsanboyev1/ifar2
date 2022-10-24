@@ -3,7 +3,6 @@ package uz.master.domain;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,14 +21,13 @@ public class News {
 
     private String title;
     private String body;
+    private String link;
 
     private boolean news;
     private boolean seminar;
 
     private String picture;
-
-    @CreationTimestamp
-    private Date date;
+    private String createdDate;
     private Integer seen;
     private boolean deleted;
 }

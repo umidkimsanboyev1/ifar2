@@ -90,16 +90,43 @@ public class MenuController {
     @GetMapping("/News/{byDate}/{page}")
     public String News(@PathVariable int page, Model model, @PathVariable boolean byDate) {
         List<News> content = newsService.getAllNews(page, byDate);
-        model.addAttribute("articles", content);
+        model.addAttribute("content", content);
         return "News";
 
     }
 
     @GetMapping("/News/search")
     public String News(SearchDTO dto, Model model) {
-        List<News> content = newsService.search(dto.getText());
+        List<News> content = newsService.newsSearch(dto.getText());
         model.addAttribute("articles", content);
         return "News";
+    }
+
+    @GetMapping("/Seminars")
+    public String Seminars() {
+        return "redirect:/Seminars/true/0";
+
+    }
+
+    @GetMapping("/Seminars/{byDate}")
+    public String Seminars(@PathVariable boolean byDate) {
+        return "redirect:/Seminars/" + byDate + "/0";
+
+    }
+
+    @GetMapping("/Seminars/{byDate}/{page}")
+    public String Seminars(@PathVariable int page, Model model, @PathVariable boolean byDate) {
+        List<News> content = newsService.getAllSeminars(page, byDate);
+        model.addAttribute("content", content);
+        return "Seminars";
+
+    }
+
+    @GetMapping("/Seminars/search")
+    public String Seminars(SearchDTO dto, Model model) {
+        List<News> content = newsService.seminarSearch(dto.getText());
+        model.addAttribute("articles", content);
+        return "Seminars";
     }
 
     @GetMapping("/Projects")
@@ -120,18 +147,6 @@ public class MenuController {
 
     }
 
-    @GetMapping("/Seminars")
-    public String Seminars() {
-        return "redirect:/Seminars/0";
-
-    }
-
-    @GetMapping("/Seminars/{page}")
-    public String Seminars(@PathVariable int page) {
-        List<News> content = newsService.getAllSeminars(page);
-        return "Seminars";
-
-    }
 
 
 }

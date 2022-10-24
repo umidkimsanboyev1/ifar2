@@ -15,6 +15,9 @@
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Ubuntu:300,300i,400,400i,500,500i,700,700i" id="u-page-google-font"
           rel="stylesheet">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
 
 
     <script type="application/ld+json">{
@@ -165,6 +168,10 @@
                             </li>
                             <li class="u-nav-item"><a
                                     class="u-active-palette-1-base u-border-3 u-border-active-palette-1-base u-border-grey-75 u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-button-style u-hover-palette-1-light-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white"
+                                    style="padding: 16px 8px;" th:href="@{/News}">News</a>
+                            </li>
+                            <li class="u-nav-item"><a
+                                    class="u-active-palette-1-base u-border-3 u-border-active-palette-1-base u-border-grey-75 u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-button-style u-hover-palette-1-light-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white"
                                     style="padding: 16px 8px;" th:href="@{/Articles}">Articles</a>
                             </li>
                             <li class="u-nav-item"><a
@@ -266,7 +273,7 @@
                     </a>
                 </p>
                 <p class="u-text u-text-default u-text-2">
-                    <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" th:href="@{/Articles/{byDate}(byDate=true)}"><span class="u-file-icon u-icon"><img src="/images/7375970.png" alt=""></span>&nbsp;Date
+                    <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" th:href="@{/Articles/{byDate}(byDate=false)}"><span class="u-file-icon u-icon"><img src="/images/7375970.png" alt=""></span>&nbsp;Date
                     </a>
                 </p>
             </div>
@@ -315,69 +322,43 @@
                             pdf
                         </a>
                         <p class="u-align-left u-small-text u-text u-text-variant u-text-6"
-                           th:text="'Received: ' + ${article.getReceived()} + ' / Revised: '+ ${article.getRevised()} + ' / Accepted' + ${article.getAccepted()} + ' / Published' + ${article.getPublished()} " > </p>
+                           th:text="'Received: ' + ${article.getReceived()} + ' / Revised: '+ ${article.getRevised()} + ' / Accepted ' + ${article.getAccepted()} + ' / Published ' + ${article.getPublished()} " > </p>
                     </div>
                 </div><!--/blog_post-->
             </div>
         </div><!--/blog-->
     </div>
 </section>
-<section class="u-align-center u-clearfix u-grey-5 u-section-2" id="sec-07aa">
+
+
+<section class="u-clearfix u-section-3" id="sec-79ab">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h2 class="u-text u-text-default u-text-1">All articles</h2>
-        <div class="u-accordion u-spacing-10 u-accordion-1">
-            <div class="u-accordion-item">
-                <a aria-controls="accordion-0781"
-                   aria-selected="true" class="active u-accordion-link u-active-palette-1-base u-button-style u-hover-palette-1-light-1 u-palette-1-light-1 u-radius-14 u-accordion-link-1" id="link-accordion-0781">
-                    <span class="u-accordion-link-text">2022</span><span
-                        class="u-accordion-link-icon u-icon u-icon-rectangle u-text-white u-icon-1"><svg
-                        class="u-svg-link" preserveAspectRatio="xMidYMin slice" style="" viewBox="0 0 42 42"><use
-                        xlink:href="#svg-f4c1" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg><svg
-                        class="u-svg-content" id="svg-f4c1" style="enable-background:new 0 0 42 42;" viewBox="0 0 42 42" x="0px"
-                        y="0px"><polygon
-                        points="42,20 22,20 22,0 20,0 20,20 0,20 0,22 20,22 20,42 22,42 22,22 42,22 "></polygon></svg></span>
-                </a>
-                <div aria-labelledby="link-accordion-0781"
-                     class="u-accordion-active u-accordion-pane u-container-style u-shape-rectangle u-accordion-pane-1" id="accordion-0781">
-                    <div class="u-container-layout u-valign-top u-container-layout-1">
-                        <a class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-1"
-                           href="https://nicepage.com/html-website-builder">01-03</a>
-                        <a class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-2"
-                           href="https://nicepage.com/html-website-builder">04-06</a>
-                        <a class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-3"
-                           href="https://nicepage.com/html-website-builder">10-12</a>
-                        <a class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-4"
-                           href="#">07-09</a>
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+            <div class="u-gutter-0 u-layout">
+                <div class="u-layout-row">
+                    <div class="u-align-center u-container-style u-layout-cell u-size-10 u-size-30-md u-layout-cell-1" data-href="#">
+                        <div class="u-border-2 u-border-grey-75 u-container-layout u-valign-top u-container-layout-1">
+                            <p class="u-text u-text-1">1</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="u-accordion-item">
-                <a aria-controls="accordion-4c47"
-                   aria-selected="false" class="u-accordion-link u-active-palette-1-base u-button-style u-hover-palette-1-light-1 u-palette-1-light-1 u-radius-14 u-accordion-link-2" id="link-accordion-4c47">
-                    <span class="u-accordion-link-text">2021</span><span
-                        class="u-accordion-link-icon u-icon u-icon-rectangle u-text-white u-icon-2"><svg
-                        class="u-svg-link" preserveAspectRatio="xMidYMin slice" style="" viewBox="0 0 42 42"><use
-                        xlink:href="#svg-f2c3" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg><svg
-                        class="u-svg-content" id="svg-f2c3" style="enable-background:new 0 0 42 42;" viewBox="0 0 42 42" x="0px"
-                        y="0px"><polygon
-                        points="42,20 22,20 22,0 20,0 20,20 0,20 0,22 20,22 20,42 22,42 22,22 42,22 "></polygon></svg></span>
-                </a>
-                <div aria-labelledby="link-accordion-4c47" class="u-accordion-pane u-container-style u-shape-rectangle u-accordion-pane-2"
-                     id="accordion-4c47">
-                    <div class="u-container-layout u-container-layout-2">
-                        <a class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-5"
-                           href="https://nicepage.com/html-website-builder">01-03</a>
-                        <a class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-6"
-                           href="https://nicepage.com/html-website-builder">04-06</a>
-                        <a class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-7"
-                           href="https://nicepage.com/html-website-builder">10-12</a>
-                        <a class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-8"
-                           href="https://nicepage.com/html-website-builder">07-09</a>
+                    <div class="u-container-style u-layout-cell u-size-10 u-size-30-md u-layout-cell-2">
+                        <div class="u-border-2 u-border-grey-75 u-container-layout u-container-layout-2"></div>
+                    </div>
+                    <div class="u-container-style u-layout-cell u-size-10 u-size-30-md u-layout-cell-3">
+                        <div class="u-border-2 u-border-grey-75 u-container-layout u-container-layout-3"></div>
+                    </div>
+                    <div class="u-container-style u-layout-cell u-size-10 u-size-30-md u-layout-cell-4">
+                        <div class="u-border-2 u-border-grey-75 u-container-layout u-container-layout-4"></div>
+                    </div>
+                    <div class="u-container-style u-layout-cell u-size-10 u-size-30-md u-layout-cell-5">
+                        <div class="u-border-2 u-border-grey-75 u-container-layout u-container-layout-5"></div>
+                    </div>
+                    <div class="u-container-style u-layout-cell u-size-10 u-size-30-md u-layout-cell-6">
+                        <div class="u-border-2 u-border-grey-75 u-container-layout u-container-layout-6"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <blockquote class="u-text u-text-2"> You can view articles of any period through accordion</blockquote>
     </div>
 </section>
 
@@ -488,17 +469,6 @@
         </div>
     </div>
 </footer>
-<section class="u-backlink u-clearfix u-grey-80">
-    <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-        <span>Website Templates</span>
-    </a>
-    <p class="u-text">
-        <span>created with</span>
-    </p>
-    <a class="u-link" href="" target="_blank">
-        <span>Website Builder Software</span>
-    </a>.
-</section>
 <section class="u-align-center u-clearfix u-cookies-consent u-grey-80 u-cookies-consent" id="sec-7033">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
@@ -651,6 +621,8 @@
              viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg"><path
                 d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
     </span>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
 </body>
 </html>

@@ -10,6 +10,7 @@ public class NewsDTO {
 
     private String title;
     private String body;
+    private String link;
     private boolean news;
     private boolean seminar;
     private MultipartFile picture;

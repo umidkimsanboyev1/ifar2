@@ -59,7 +59,7 @@ public class AuthUserService {
         authUser.setUsername(authUser1.getUsername());
         authUser.setEmail1(mails.get(0));
         authUser.setEmail2(mails.get(1));
-        authUser.setPicture("/DBProjects/IFAR2/src/main/resources/static/images/" + fileStorageService.store(picture));
+        authUser.setPicture("/uploads/" + fileStorageService.store(picture));
         authUser.setDeleted(false);
         authUserRepository.save(authUser);
         return "Succes";

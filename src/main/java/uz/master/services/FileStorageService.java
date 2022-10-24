@@ -20,7 +20,7 @@ import java.util.Optional;
 @Slf4j
 @Service("fileService")
 public class FileStorageService {
-    public static final String UPLOADS_URL = "/DBProjects/IFAR2/src/main/resources/static/images/";
+    public static final String UPLOADS_URL = "/uploads/";
     public static final Path PATH = Paths.get(UPLOADS_URL);
 
     private final UploadsRepository repository;
