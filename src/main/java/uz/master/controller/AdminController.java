@@ -73,7 +73,7 @@ public class AdminController {
     public String getStaff(@PathVariable String name, Model model) {
         AuthUser user;
         try {
-            user = authUserService.findUser(name);
+            user = authUserService.findUser(name.trim());
         } catch (UsernameNotFoundException exception) {
             return "404";
         }

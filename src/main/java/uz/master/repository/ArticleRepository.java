@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface ArticleRepository extends JpaRepository<Articles, Long> {
 
-    List<Articles> findArticlesByThemeContainingIgnoreCaseOrAuthorsContainingIgnoreCaseAndDeletedFalseAndActiveTrue(String theme, String authors);
-    List<Articles> findArticlesByDeletedFalseAndActiveTrueOrderByPublishedAsc(Pageable pageable);
-    List<Articles> findArticlesByDeletedFalseAndActiveTrueOrderByPublishedDesc(Pageable pageable);
+    List<Articles> findArticlesByThemeContainingIgnoreCaseOrAuthorsContainingIgnoreCaseAndDeletedFalse(String theme, String authors);
+    List<Articles> findArticlesByDeletedFalse(Pageable pageable);
+   // List<Articles> findArticlesByDeletedFalseAndActiveTrueOrderBy(Pageable pageable);
 }

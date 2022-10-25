@@ -7,7 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.Date;
 
 @Entity
 @Getter
@@ -19,19 +18,10 @@ public class Articles {
     private Long id;
 
     private String theme;
-    private String universities;
     private String authors;
-    private String logo;
+    private String metaData;
+    private String abstraction;
     private String downloadLink;
-    private String publishedLink;
-
-    private String accepted;
-    private String received;
-    private String revised;
-    private String published;
-    private Date createdAt;
-    private boolean openAccess;
     private boolean deleted;
-    private boolean active;
 
 }
